@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepush": "npm run lint",
+    "lint": " ./node_modules/.bin/eslint src/*.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +17,9 @@
   "bugs": {
     "url": "https://github.com/kielvi/ttd/issues"
   },
-  "homepage": "https://github.com/kielvi/ttd#readme"
+  "homepage": "https://github.com/kielvi/ttd#readme",
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "husky": "^4.2.5"
+  }
 }
